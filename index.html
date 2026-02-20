@@ -2,71 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Name | Portfolio</title>
+    <title>William Smitt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Your Name</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <span class="logo">Wapouls Kadouls</span>
+        </div>
 
-    <!-- Hero Section -->
+        <div class="nav-right">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
     <section class="hero">
-        <h2>Hello, I'm a Web Developer</h2>
-        <p>I build modern and responsive websites.</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <h1>Creative Developer & Game Programmer</h1>
+        <p>I build immersive systems, interactive experiences, and polished gameplay.</p>
+        <a href="#projects" class="primary-btn">View Projects</a>
     </section>
 
-    <!-- About Section -->
+    <!-- ABOUT -->
     <section id="about" class="section">
         <h2>About Me</h2>
         <p>
-            I'm passionate about building clean and user-friendly websites.
-            I specialize in HTML, CSS, and JavaScript.
+            Passionate about game programming, systems design and gameplay engineering.
+            Experienced in Unity, C#, and collaborative team environments.
         </p>
     </section>
 
-    <!-- Projects Section -->
+    <!-- PROJECTS -->
     <section id="projects" class="section">
-        <h2>My Projects</h2>
+        <h2>Projects</h2>
 
-        <div class="projects-container">
+        <div class="project-grid">
+
+            <!-- Project Card -->
             <div class="project-card">
-                <h3>Project One</h3>
-                <p>Short description of your project.</p>
+                <div class="project-image">
+                    <img class="bg-image" src="images/itchioLogo.png" alt="">
+                    <img class="main-image" src="images/itchioLogo.png" alt="Project preview">
+                </div>
+
+
+                <div class="project-body">
+                    <h3>Denet</h3>
+                    <p>
+                        A point-and-click puzzle game built as a team project at FutureGames.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag unity">Unity</span>
+                        <span class="tag csharp">C#</span>
+                        <span class="tag team">Team Project</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="projects/project1_2.html" class="btn">View Project</a>
+                    </div>
+                </div>
             </div>
 
+            <!-- Project Card -->
             <div class="project-card">
-                <h3>Project Two</h3>
-                <p>Short description of your project.</p>
+                <div class="project-image">
+                    <img class="bg-image" src="images/icon.jpg" alt="">
+                    <img class="main-image" src="images/icon.jpg" alt="Project preview">
+                </div>
+
+
+                <div class="project-body">
+                    <h3>Space Survivor</h3>
+                    <p>
+                        Survivors-style bullet hell game with scaling enemy systems.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag unity">Unity</span>
+                        <span class="tag csharp">C#</span>
+                        <span class="tag solo">Solo Project</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="https://github.com/wsmitt1/SpaceSurvivor" target="_blank" class="btn secondary">GitHub</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="project-card">
-                <h3>Project Three</h3>
-                <p>Short description of your project.</p>
-            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT -->
     <section id="contact" class="section">
-        <h2>Contact Me</h2>
-        <p>Email: your.email@example.com</p>
+        <h2>Contact</h2>
+        <p>Email@example.com</p>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Your Name. All Rights Reserved.</p>
-    </footer>
 
 </body>
 </html>
