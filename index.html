@@ -5,15 +5,67 @@
     <title>William Smitt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .project-filters {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 20px 0;
+            background: #1a1a1a; /* Dark background container for filters */
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .filter-category {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .category-label {
+            font-weight: bold;
+            min-width: 90px;
+            color: #888;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filter-btn {
+            background-color: #2a2a2a;
+            color: #ddd;
+            border: 1px solid #444;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+            .filter-btn:hover {
+                background-color: #444;
+                color: #fff;
+            }
+
+            .filter-btn.active {
+                background-color: #0078d7; /* Change to your portfolio's accent color */
+                color: white;
+                border-color: #0078d7;
+            }
+        /* The secret weapon: ensures hidden projects actually disappear without breaking grid layouts */
+        .project-card.hidden {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-left">
             <span class="logo">William Smitt</span>
         </div>
-
         <div class="nav-right">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -21,74 +73,106 @@
         </div>
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
         <h1>Creative Developer & Game Programmer</h1>
         <p>I build immersive systems, interactive experiences, and polished gameplay.</p>
         <a href="#projects" class="primary-btn">View Projects</a>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="section">
         <h2>About Me</h2>
         <p>
             Passionate about game programming, systems design and gameplay engineering.
-            Experienced in Unity, C#, and collaborative team environments.
+            Experienced in a variety of engines and languages, you can see some of my work below.
         </p>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects" class="section">
-        <h2>Projects</h2>
+        <div class="projectheader">
+            <h2>Projects</h2>
+
+            <div class="project-filters">
+                <div class="filter-category">
+                    <span class="category-label">All:</span>
+                    <button class="filter-btn active" data-filter="all">All Projects (<span id="all-count">0</span>)</button>
+                </div>
+
+                <div class="filter-category">
+                    <span class="category-label">Engine:</span>
+                    <button class="filter-btn" data-filter="unity">Unity (<span class="count">0</span>)</button>
+                    <button class="filter-btn" data-filter="unreal">Unreal (<span class="count">0</span>)</button>
+                </div>
+
+                <div class="filter-category">
+                    <span class="category-label">Language:</span>
+                    <button class="filter-btn" data-filter="csharp">C# (<span class="count">0</span>)</button>
+                    <button class="filter-btn" data-filter="cpp">C++ (<span class="count">0</span>)</button>
+                    <button class="filter-btn" data-filter="bp">Blueprint (<span class="count">0</span>)</button>
+                </div>
+
+                <div class="filter-category">
+                    <span class="category-label">Team:</span>
+                    <button class="filter-btn" data-filter="team">Team Project (<span class="count">0</span>)</button>
+                    <button class="filter-btn" data-filter="solo">Solo Project (<span class="count">0</span>)</button>
+                </div>
+            </div>
+        </div>
+
 
         <div class="project-grid">
 
-            <!-- Project Card -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img class="bg-image" src="images/GameProject3.png" alt="">
+                    <img class="main-image" src="images/GameProject3.png" alt="Project preview">
+                </div>
+                <div class="project-body">
+                    <h3>The CEO Must Go</h3>
+                    <p>A chaotic physics game where you play as a disgruntled employee. Built at FutureGames.</p>
+                    <div class="tags">
+                        <span class="tag unreal">Unreal</span>
+                        <span class="tag cpp">C++</span>
+                        <span class="tag bp">Blueprint</span>
+                        <span class="tag team">Team Project</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="projects/project3.html" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="project-card">
                 <div class="project-image">
                     <img class="bg-image" src="images/itchioLogo.png" alt="">
                     <img class="main-image" src="images/itchioLogo.png" alt="Project preview">
                 </div>
-
-
                 <div class="project-body">
                     <h3>Denet</h3>
-                    <p>
-                        A point-and-click puzzle game built as a team project at FutureGames.
-                    </p>
-
+                    <p>A point-and-click puzzle game built as a team project at FutureGames.</p>
                     <div class="tags">
                         <span class="tag unity">Unity</span>
                         <span class="tag csharp">C#</span>
                         <span class="tag team">Team Project</span>
                     </div>
-
                     <div class="project-buttons">
                         <a href="projects/project1_2.html" class="btn">View Project</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Card -->
             <div class="project-card">
                 <div class="project-image">
                     <img class="bg-image" src="images/icon.jpg" alt="">
                     <img class="main-image" src="images/icon.jpg" alt="Project preview">
                 </div>
-
-
                 <div class="project-body">
                     <h3>Space Survivor</h3>
-                    <p>
-                        A Survivors-like bullet hell game with rapid enemy scaling.
-                    </p>
-
+                    <p>A Survivors-like bullet hell game with rapid enemy scaling.</p>
                     <div class="tags">
                         <span class="tag unity">Unity</span>
                         <span class="tag csharp">C#</span>
                         <span class="tag solo">Solo Project</span>
                     </div>
-
                     <div class="project-buttons">
                         <a href="projects/project2.html" target="_blank" class="btn">View Project</a>
                     </div>
@@ -98,11 +182,61 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="section">
         <h2>Contact</h2>
-        <p>Email TBA</p>
+        <p>wsmitt999@gmail.com</p>
     </section>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const projects = document.querySelectorAll(".project-card");
+            const filterBtns = document.querySelectorAll(".filter-btn");
+
+            // 1. Setup default total count
+            const allCountEl = document.getElementById("all-count");
+            if (allCountEl) allCountEl.textContent = projects.length;
+
+            // 2. Scan project tags and populate button numbers dynamically
+            filterBtns.forEach(btn => {
+                const filter = btn.getAttribute("data-filter");
+                if (filter !== "all") {
+                    let count = 0;
+                    projects.forEach(project => {
+                        // Check if this project card contains a span matching our data-filter class
+                        if (project.querySelector(`.tag.${filter}`)) {
+                            count++;
+                        }
+                    });
+
+                    const countSpan = btn.querySelector(".count");
+                    if (countSpan) countSpan.textContent = count;
+                }
+            });
+
+            // 3. Click handler logic
+            filterBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    // Toggle active visual states
+                    filterBtns.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const currentFilter = btn.getAttribute("data-filter");
+
+                    // Filter the DOM cards using our specialized CSS utility class
+                    projects.forEach(project => {
+                        if (currentFilter === "all") {
+                            project.classList.remove("hidden");
+                        } else {
+                            if (project.querySelector(`.tag.${currentFilter}`)) {
+                                project.classList.remove("hidden");
+                            } else {
+                                project.classList.add("hidden");
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -195,6 +195,49 @@ h1, h2, h3 {
     border-radius: 20px;
     font-weight: 500;
 }
+/* Filter Container */
+.project-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Category Row */
+.filter-category {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.category-label {
+    font-weight: bold;
+    min-width: 80px; /* Aligns the buttons neatly */
+    color: #fff; /* Adjust to your text color */
+}
+
+/* Base Button Styling */
+.filter-btn {
+    background-color: #2a2a2a; /* Adjust to your theme */
+    color: #ddd;
+    border: 1px solid #444;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+    .filter-btn:hover {
+        background-color: #444;
+    }
+
+    /* Active State */
+    .filter-btn.active {
+        background: #4f8cff;
+        color: white;
+    }
 
     /* Color-coded tags */
     .tag.unity {
@@ -206,6 +249,22 @@ h1, h2, h3 {
     .tag.csharp {
         background: #512bd4;
         color: white;
+    }
+
+    .tag.cpp {
+        background: #aa9e17;
+        color: white;
+    }
+
+    .tag.bp {
+        background: #1e17b1;
+        color: white;
+    }
+
+    .tag.unreal {
+        background: #222;
+        color: #fff;
+        border: 1px solid #444;
     }
 
     .tag.team {
